@@ -15,3 +15,20 @@ test("Adds an input", () => {
 test("Subtracts an input", () => {
     expect(module.calculator.subtract(5,2)).toBe(3);
 });
+
+test("Divides an input", () => {
+    expect(module.calculator.divide(16, 4)).toBe(4);
+});
+
+test("Multiplies an input", () => {
+    expect(module.calculator.multiply(4,2)).toBe(8);
+});
+
+test("Adds an input", () => {
+    expect(module.analyzeArray([1,8,3,4,2,6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+      });
+});

@@ -21,9 +21,25 @@ const calculator = {
     }
   };
   
+function analyzeArray(arr) {
+    const sum = arr.reduce((prev, curr) => prev + curr, 0);
+    const arrLength = arr.length;
+
+    const avg = sum / arrLength;
+    const minResult = Math.min(...arr);
+    const maxResult = Math.max(...arr);
+    
+    return {
+        average: avg,
+        min: minResult,
+        max: maxResult,
+        length: arrLength
+    }
+}
 
 module.exports = {
     capitalize,
     reverseString,
-    calculator
+    calculator,
+    analyzeArray
 };
